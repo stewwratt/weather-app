@@ -1,38 +1,90 @@
-.App {
+body {
+  background: rgb(190, 168, 168);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 29%, rgba(201,255,241,1) 72%, rgba(255,217,224,1) 100%);
   text-align: center;
+  color: rgb(243, 234, 234);
+  padding: 30px;
+  font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  border-radius: 20px;
+  background-color: rgb(243, 234, 234);
+  outline: none;
+  border: transparent 1px;
+  padding: 10px;
+  margin: 10px 5px;
+  font-weight: 500;
+  color:rgb(113, 119, 121);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+  color:rgb(114, 114, 114);
+  background-color: rgb(243, 234, 234);
+  border-radius: 20px;
+  outline: none;
+  border: transparent 1px;
+  padding: 10px;
+  margin: 20px 5px;
+  font-weight: 500;
+}
+
+.header-div {
+  background-color:rgb(160, 174, 179);
+  margin-top: 75px;
+  padding-bottom: 100px;
+}
+
+.header-div div {
+  background-color:rgb(160, 174, 179);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.weather-description h3{
+  color: rgb(228, 217, 217);
+  font-weight: 400;
+}
+
+.weather-description p {
+  color: rgb(247, 241, 241);
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 650;
+  margin-bottom: 10px; 
+}
+
+.form {
+  background-color: rgb(123, 134, 138);
+}
+
+.data img {
+  background-color:  rgb(39, 39, 39) ;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -60px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .weather-description {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-align: center;
   }
-}
+  .header-div {
+    margin: 20px 90px 20px 90 px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  .section {
+    text-align: center;
   }
+
 }
+

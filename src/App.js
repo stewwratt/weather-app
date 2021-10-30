@@ -21,12 +21,12 @@ function App() {
   const [search, setSearch] = useState('')
 
   const [allData, setAllData] = useState({
-    city:'',
-    country:'',
-    temperature:'',
-    humidity:'',
-    minimumTemp:'',
-    weatherIcon: ''
+    city:'Sydney',
+    country:'AU',
+    temperature:'0',
+    humidity:'0',
+    minimumTemp:'0',
+    weatherIcon: '10d'
   })
 
   useEffect(() => {
@@ -75,7 +75,7 @@ function App() {
     //section tag in react for sections and main tag for the main build
     //under main we will have sections for the form and for displaying results
     <main>
-      <div className="App">
+      <div className="form">
         <form onSubmit = {handleSubmit}>
           <input
             value={search}
@@ -86,27 +86,29 @@ function App() {
           />
           <button for='city'>Search</button>
         </form> 
-          <section>
-            <div>
+        <section>
+          <div className = 'header-div'>
+            <div className = 'data'>
               <img src = {'https://openweathermap.org/img/wn/'+allData.weatherIcon+'@2x.png'}/>
             </div>
-            <h1>{allData.city}</h1>
-            <h3>{allData.country}</h3>
-            <div>
+            <h1 className = 'title'>{allData.city}</h1>
+            <h2>{allData.country}</h2>
+            <div className = 'weather-description'>
               <div>
                 <h3> TEMPERATURE </h3>
-                <h3>{allData.temperature}°C </h3>
+                <p>{allData.temperature}°C </p>
               </div>
               <div>
                 <h3> MINIMUM TEMPERATURE </h3>
-                <h3>{allData.minimumTemp}°C </h3>
+                <p>{allData.minimumTemp}°C </p>
               </div>
               <div>
                 <h3> HUMIDITY </h3>
-                <h3>{allData.humidity}% </h3>
+                <p>{allData.humidity}% </p>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
       </div>
     </main>
   );
